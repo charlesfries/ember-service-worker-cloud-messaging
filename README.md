@@ -1,7 +1,7 @@
 ember-service-worker-cloud-messaging
 ==============================================================================
 
-[Short description of the addon.]
+Requires installation of `ember-service-worker` `ember-cloud-firestore-adapte`, & `ember-firebase-service`.
 
 
 Compatibility
