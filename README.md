@@ -1,7 +1,7 @@
 ember-service-worker-cloud-messaging
 ==============================================================================
 
-Requires installation of `ember-service-worker` `ember-cloud-firestore-adapte`, & `ember-firebase-service`.
+Requires installation of `ember-service-worker`, `ember-cloud-firestore-adapter`, & `ember-firebase-service`.
 
 
 Compatibility
