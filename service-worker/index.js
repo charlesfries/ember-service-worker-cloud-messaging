@@ -4,12 +4,12 @@ importScripts(`https://www.gstatic.com/firebasejs/${firebaseVersion}/firebase-me
 
 const messaging = firebase.messaging();
 
-messaging.onBackgroundMessage(({ notification }) => {
+messaging.onBackgroundMessage(payload => {
 	console.log('[background-notification]', payload);
 
-	const title = notification.title;
+	const { title, body } = paload.notification;
 	const options = {
-		body: notification.body,
+		body,
 		icon: '/assets/logo.png',
 	};
 
