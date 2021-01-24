@@ -7,10 +7,10 @@ const messaging = firebase.messaging();
 messaging.onBackgroundMessage(payload => {
 	console.log('[background-notification]', payload);
 
-	const { title, body } = paload.notification;
+	const { title, body, image } = paload.notification;
 	const options = {
 		body,
-		icon: '/assets/logo.png',
+		icon: image,
 	};
 
 	self.registration.showNotification(title, options);
