@@ -1,17 +1,15 @@
-import {
-  firebaseVersion
-} from 'ember-cloud-firestore-adapter/service-worker/config';
+import { firebaseVersion } from 'ember-cloud-firestore-adapter/service-worker/config';
 
 importScripts(`https://www.gstatic.com/firebasejs/${firebaseVersion}/firebase-messaging.js`);
 
 const messaging = firebase.messaging();
 
-messaging.onBackgroundMessage(payload => {
-	console.log('Background', payload);
+messaging.onBackgroundMessage(({ notification }) => {
+	console.log('[background-notification]', payload);
 
-	const title = 'Background Message Title';
+	const title = notification.title;
 	const options = {
-		body: 'Background Message body.',
+		body: notification.body,
 		icon: '/assets/logo.png',
 	};
 
