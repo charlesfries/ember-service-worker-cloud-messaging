@@ -41,7 +41,7 @@ let token = await messaging.getToken();
 console.log(token);
 ```
 
-Then visit https://console.firebase.google.com/project/taia-brokers-dev/notification/compose to send a message.
+Then visit https://console.firebase.google.com/project/<APP_ID>/notification/compose to send a message.
 
 
 Contributing
